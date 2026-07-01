@@ -1,9 +1,333 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Platov Generalcon — Painting, Drywall, Flooring, Decks, Tile &amp; More</title>
+  <meta name="description" content="Platov Generalcon is a solo contracting outfit handling painting, drywall, flooring, decks, tile, renovations, home maintenance, and lock installation.">
 
+  <!-- Fonts: Big Shoulders Display (headlines), Inter (body), JetBrains Mono (labels/stamps) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;700;800;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
 <body>
-  <h1>YOUR NAME</h1>
-  <p>Welcome to my website!</p>
-  <img src="https://content.codecademy.com/articles/github-pages-via-web-app/happy-ice-cream.gif" />
-</body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a href="#top" class="wordmark">Platov<span>Generalcon</span></a>
+
+      <nav class="main-nav" id="main-nav">
+        <a href="#services">Services</a>
+        <a href="#gallery">Job Photos</a>
+        <a href="#how">How It Works</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <!-- TODO: replace with your real Instagram handle/URL -->
+        <a href="https://www.instagram.com/platov_generalcon" target="_blank" rel="noopener" class="nav-instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="0.6" fill="currentColor" stroke="none"/></svg>
+          Instagram
+        </a>
+      </nav>
+
+      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <p class="eyebrow">Solo &middot; Licensed hands, no subcontractors &middot; Based in [Your Service Area]</p>
+        <h1 class="hero-title">One contractor.<br>Every job done<br>like it's his own house.</h1>
+        <p class="hero-sub">Platov Generalcon handles the full list — painting, drywall, flooring, decks, tile, renovations, home maintenance, and lock installs. No crew rotation, no middleman. The person who quotes the job is the person who does it.</p>
+        <div class="hero-actions">
+          <a href="#gallery" class="btn btn-primary">See the work</a>
+          <a href="https://www.instagram.com/platov_generalcon" target="_blank" rel="noopener" class="btn btn-ghost">Message on Instagram</a>
+        </div>
+      </div>
+
+      <!-- service ticker, styled like lettering on a work van door -->
+      <div class="ticker" aria-hidden="true">
+        <div class="ticker-track">
+          <span>PAINTING</span><span>•</span><span>DRYWALL</span><span>•</span><span>FLOORING</span><span>•</span><span>DECKS</span><span>•</span><span>TILE</span><span>•</span><span>RENOVATIONS</span><span>•</span><span>HOME MAINTENANCE</span><span>•</span><span>LOCK INSTALLATION</span><span>•</span>
+          <span>PAINTING</span><span>•</span><span>DRYWALL</span><span>•</span><span>FLOORING</span><span>•</span><span>DECKS</span><span>•</span><span>TILE</span><span>•</span><span>RENOVATIONS</span><span>•</span><span>HOME MAINTENANCE</span><span>•</span><span>LOCK INSTALLATION</span><span>•</span>
+        </div>
+      </div>
+
+      <!-- signature element: tape-measure ruler divider -->
+      <svg class="ruler" viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+        <defs>
+          <pattern id="ruler-ticks" width="20" height="56" patternUnits="userSpaceOnUse">
+            <rect width="20" height="56" fill="var(--paper)"/>
+            <line x1="0" y1="0" x2="0" y2="34" stroke="var(--ink)" stroke-width="2"/>
+            <line x1="10" y1="0" x2="10" y2="20" stroke="var(--ink)" stroke-width="1.5"/>
+          </pattern>
+        </defs>
+        <rect width="1200" height="56" fill="url(#ruler-ticks)"/>
+        <line x1="0" y1="55" x2="1200" y2="55" stroke="var(--ink)" stroke-width="2"/>
+      </svg>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="services">
+      <div class="container">
+        <p class="section-eyebrow">The Trade List</p>
+        <h2 class="section-title">What gets done</h2>
+
+        <div class="ticket-grid">
+
+          <article class="ticket">
+            <svg class="ticket-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 14l6-6 4 4-6 6H3v-4z"/><path d="M9 8l4-4 4 4-4 4"/><path d="M16 5l3 3"/></svg>
+            <h3>Painting</h3>
+            <p>Interior and exterior, cut lines you can trust, finishes that hold up past the first season.</p>
+          </article>
+
+          <article class="ticket">
+            <svg class="ticket-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="1"/><path d="M3 9h18M3 14h18M8 4v16M16 4v16"/></svg>
+            <h3>Drywall</h3>
+            <p>Hanging, taping, mudding, and patch repair — finished smooth and ready for paint.</p>
+          </article>
+
+          <article class="ticket">
+            <svg class="ticket-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 19l6-14h6l6 14"/><path d="M6.5 11h11M5 15h14"/></svg>
+            <h3>Flooring</h3>
+            <p>Hardwood, laminate, and vinyl plank installs, plus repairs to floors already down.</p>
+          </article>
+
+          <article class="ticket">
+            <svg class="ticket-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 20V9l8-5 8 5v11"/><path d="M4 14h16M8 14v6M12 14v6M16 14v6"/></svg>
+            <h3>Decks</h3>
+            <p>Built, repaired, and resurfaced — decks that hold up to weather and to years of use.</p>
+          </article>
+
+          <article class="ticket">
+            <svg class="ticket-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="3" y="3" width="8" height="8"/><rect x="13" y="3" width="8" height="8"/><rect x="3" y="13" width="8" height="8"/><rect x="13" y="13" width="8" height="8"/></svg>
+            <h3>Tile</h3>
+            <p>Backsplashes, showers, and floors — laid level, spaced even, and grouted clean.</p>
+          </article>
+
+          <article class="ticket">
+            <svg class="ticket-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14.7 6.3l3 3L7 20H4v-3L14.7 6.3z"/><path d="M13 8l3 3"/><path d="M3 3l4 1 1 4-3 3-4-1-1-4z"/></svg>
+            <h3>Renovations</h3>
+            <p>Kitchen and bath updates, room conversions, and full remodel projects start to finish.</p>
+          </article>
+
+          <article class="ticket">
+            <svg class="ticket-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M14.7 6.3a4 4 0 015.7 5.7l-7 7-6-1-1-6 7-7z"/><path d="M8 16l-4 4"/><path d="M9 9l1.5 1.5"/></svg>
+            <h3>Home Maintenance</h3>
+            <p>The running list every homeowner keeps putting off — finally getting crossed out.</p>
+          </article>
+
+          <article class="ticket">
+            <svg class="ticket-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="1.5"/><path d="M8 11V7a4 4 0 018 0v4"/><circle cx="12" cy="15.5" r="1.4"/></svg>
+            <h3>Lock Installation</h3>
+            <p>New locks, re-keys, and hardware swaps for doors that need to actually lock right.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how" id="how">
+      <div class="container">
+        <p class="section-eyebrow light">The Process</p>
+        <h2 class="section-title light">How a job gets booked</h2>
+
+        <ol class="steps">
+          <li>
+            <span class="step-num">01</span>
+            <h3>Send the details</h3>
+            <p>Message on Instagram with the job, the space, and a few photos if you've got them.</p>
+          </li>
+          <li>
+            <span class="step-num">02</span>
+            <h3>Walkthrough &amp; estimate</h3>
+            <p>A look in person, measurements taken on site, and a straight number — no inflated middle-man markup.</p>
+          </li>
+          <li>
+            <span class="step-num">03</span>
+            <h3>Work gets done</h3>
+            <p>On the schedule we agreed on, cleaned up after, no surprise line items at the end.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY ============ -->
+    <section class="gallery" id="gallery">
+      <div class="container">
+        <p class="section-eyebrow">Job Site Photos</p>
+        <h2 class="section-title">Recent work</h2>
+        <p class="section-lede">A sample of finished jobs. Replace these placeholders with real photos — see the README for exactly how — or follow along for new work as it's posted.</p>
+
+        <div class="tile-grid">
+
+          <!-- PHOTO TILE — replace the background-image url() below with your own image path -->
+          <figure class="tile">
+            <div class="tile-media" style="background-image:url('assets/gallery/REPLACE-painting.jpg')">
+              <div class="tile-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+                <span>Add photo</span>
+              </div>
+            </div>
+            <span class="tile-stamp">JOB COMPLETE</span>
+            <figcaption><span class="tile-tag">Painting</span>Exterior repaint — two-story colonial</figcaption>
+          </figure>
+
+          <figure class="tile">
+            <div class="tile-media" style="background-image:url('assets/gallery/REPLACE-drywall.jpg')">
+              <div class="tile-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+                <span>Add photo</span>
+              </div>
+            </div>
+            <span class="tile-stamp">JOB COMPLETE</span>
+            <figcaption><span class="tile-tag">Drywall</span>Patch &amp; skim coat — hallway ceiling</figcaption>
+          </figure>
+
+          <figure class="tile">
+            <div class="tile-media" style="background-image:url('assets/gallery/REPLACE-flooring.jpg')">
+              <div class="tile-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+                <span>Add photo</span>
+              </div>
+            </div>
+            <span class="tile-stamp">JOB COMPLETE</span>
+            <figcaption><span class="tile-tag">Flooring</span>Luxury vinyl plank — living room</figcaption>
+          </figure>
+
+          <!-- CLIP TILE — points out to a specific Instagram post/reel. Swap the href for the real post URL. -->
+          <a class="tile tile-clip" href="https://www.instagram.com/platov_generalcon" target="_blank" rel="noopener">
+            <div class="tile-media tile-media-dark">
+              <div class="tile-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="currentColor" stroke="none"/></svg>
+                <span>Watch on Instagram</span>
+              </div>
+            </div>
+            <span class="tile-stamp">CLIP</span>
+            <figcaption><span class="tile-tag">Decks</span>Full deck rebuild — before to after</figcaption>
+          </a>
+
+          <figure class="tile">
+            <div class="tile-media" style="background-image:url('assets/gallery/REPLACE-tile.jpg')">
+              <div class="tile-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+                <span>Add photo</span>
+              </div>
+            </div>
+            <span class="tile-stamp">JOB COMPLETE</span>
+            <figcaption><span class="tile-tag">Tile</span>Subway tile backsplash — kitchen</figcaption>
+          </figure>
+
+          <a class="tile tile-clip" href="https://www.instagram.com/platov_generalcon" target="_blank" rel="noopener">
+            <div class="tile-media tile-media-dark">
+              <div class="tile-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M10 8l6 4-6 4V8z" fill="currentColor" stroke="none"/></svg>
+                <span>Watch on Instagram</span>
+              </div>
+            </div>
+            <span class="tile-stamp">CLIP</span>
+            <figcaption><span class="tile-tag">Renovations</span>Bathroom renovation — full walkthrough</figcaption>
+          </a>
+
+          <figure class="tile">
+            <div class="tile-media" style="background-image:url('assets/gallery/REPLACE-maintenance.jpg')">
+              <div class="tile-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+                <span>Add photo</span>
+              </div>
+            </div>
+            <span class="tile-stamp">JOB COMPLETE</span>
+            <figcaption><span class="tile-tag">Home Maintenance</span>Punch list day — six jobs, one visit</figcaption>
+          </figure>
+
+          <figure class="tile">
+            <div class="tile-media" style="background-image:url('assets/gallery/REPLACE-locks.jpg')">
+              <div class="tile-placeholder">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><rect x="2" y="6" width="20" height="14" rx="2"/><circle cx="12" cy="13" r="3.5"/><path d="M8 6l1.5-2h5L16 6"/></svg>
+                <span>Add photo</span>
+              </div>
+            </div>
+            <span class="tile-stamp">JOB COMPLETE</span>
+            <figcaption><span class="tile-tag">Lock Installation</span>Smart lock swap — front &amp; back doors</figcaption>
+          </figure>
+
+        </div>
+
+        <div class="gallery-cta">
+          <a href="https://www.instagram.com/platov_generalcon" target="_blank" rel="noopener" class="btn btn-primary">More work on Instagram</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="container about-inner">
+        <div>
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-title">Platov</h2>
+          <p>Platov Generalcon is a one-person shop — no subcontractors passing the job down the line, no office sitting between you and the work. Whoever gives the estimate is whoever shows up with the tools, and whoever shows up with the tools is whoever signs off when it's done.</p>
+          <p>Service Area: This area is for general construction and maintenance work in the local community.</p>
+        </div>
+        <div class="about-card">
+          <span class="card-label">JOB TICKET</span>
+          <dl>
+            <div><dt>Crew</dt><dd>One — Platov</dd></div>
+            <div><dt>Service area</dt><dd>Painting, Drywall, Flooring, Decks, Tile, Renovations, Home Maintenance, Lock Installations, and much more.</dd></div>
+            <div><dt>Estimates</dt><dd>Free, on-site</dd></div>
+            <div><dt>Booking</dt><dd>Via Instagram DM</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="container contact-inner">
+        <p class="section-eyebrow light">Get In Touch</p>
+        <h2 class="section-title light">Got a job that needs doing?</h2>
+        <p class="contact-sub">Send the details on Instagram — what the job is, where it is, and a photo or two if you have them. Estimates are free.</p>
+        <a href="https://www.instagram.com/platov_generalcon" target="_blank" rel="noopener" class="btn btn-primary btn-large">
+          <p class="contact-alt">Or call/text <a href="tel:+14452629388">(445) 262-9388</a> / email <a href="mailto:platov.generalcon@gmail.com">platov.generalcon@gmail.com</a></p>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="0.6" fill="currentColor" stroke="none"/></svg>
+          Message @platovgeneralcon
+        </a>
+        <!--
+          TODO: To add a phone number or email, copy this block under the Instagram link:
+          <p class="contact-alt">Or call/text <a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a> / email <a href="mailto:you@example.com">you@example.com</a></p>
+        -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a href="#top" class="wordmark small">Platov<span>Generalcon</span></a>
+      <nav class="footer-nav">
+        <a href="#services">Services</a>
+        <a href="#gallery">Job Photos</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a href="https://www.instagram.com/platovgeneralcon" target="_blank" rel="noopener" class="footer-instagram" aria-label="Platov Generalcon on Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="0.6" fill="currentColor" stroke="none"/></svg>
+      </a>
+    </div>
+    <p class="footer-fine">&copy; <span id="year"></span> Platov Generalcon. All work shown is original to this business.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
 </html>
