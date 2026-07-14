@@ -81,18 +81,14 @@
       <!-- ============ HERO ============ -->
       <section class="hero">
         <div class="container hero-inner">
-          <p class="eyebrow">
-            Solo &middot; Licensed hands, no subcontractors &middot; Based in
-            Bensalem
-          </p>
+          <p class="eyebrow">Based out of Bensalem & Trevose</p>
           <h1 class="hero-title">
-            One Contractor.<br />Every job done<br />like it's his own house.
+            One Contractor.<br />Every job done<br />like it's his own home.
           </h1>
           <p class="hero-sub">
-            Platov Generalcon handles the full list — painting, drywall,
-            flooring, decks, tile, renovations, home maintenance, and lock
-            installs. No crew rotation, no middleman. The person who quotes the
-            job is the person who does it.
+            Platov Generalcon Construction handles the full list — painting,
+            drywall, flooring, decks, tile, renovations, home maintenance, and
+            anything else :]
           </p>
           <div class="hero-actions">
             <a href="#gallery" class="btn btn-primary">See the work</a>
@@ -103,22 +99,24 @@
               class="btn btn-ghost"
               >Message on Instagram</a
             >
+            <img
+              src="images/main-house.jpg"
+              alt=""
+              class="hero-illustration"
+              aria-hidden="true"
+            />
           </div>
         </div>
 
         <!-- service ticker, styled like lettering on a work van door -->
         <div class="ticker" aria-hidden="true">
           <div class="ticker-track">
-            <span>PAINTING</span><span>•</span><span>DRYWALL</span><span>•</span
-            ><span>FLOORING</span><span>•</span><span>DECKS</span><span>•</span
-            ><span>TILE</span><span>•</span><span>RENOVATIONS</span
-            ><span>•</span><span>HOME MAINTENANCE</span><span>•</span
-            ><span>LOCK INSTALLATION</span><span>•</span> <span>PAINTING</span
-            ><span>•</span><span>DRYWALL</span><span>•</span
-            ><span>FLOORING</span><span>•</span><span>DECKS</span><span>•</span
-            ><span>TILE</span><span>•</span><span>RENOVATIONS</span
-            ><span>•</span><span>HOME MAINTENANCE</span><span>•</span
-            ><span>LOCK INSTALLATION</span><span>•</span>
+            <script>
+              const tickerText =
+                "PAINTING • DRYWALL • FLOORING • DECKS • TILE • RENOVATIONS • HOME MAINTENANCE • LOCK INSTALLATION • ";
+              const tickerTrack = document.querySelector(".ticker-track");
+              tickerTrack.textContent = tickerText.repeat(3); // Repeat the text to fill the track
+            </script>
           </div>
         </div>
 
@@ -344,23 +342,32 @@
           <ol class="steps">
             <li>
               <span class="step-num">01</span>
-              <h3>Send the details</h3>
+              <h3>Send the Details</h3>
               <p>
-                Message on Instagram with the job, the space, and a few photos
-                if you've got them.
+                Send a DM on Instagram with the job details, location, and
+                preferably a photo or two. Estimates are free.
+                <span class="step-sub"
+                  >Instagram:
+                  <a
+                    href="https://www.instagram.com/platov_generalcon/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >@platov_generalcon</a
+                  ></span
+                >
               </p>
             </li>
             <li>
               <span class="step-num">02</span>
-              <h3>Walkthrough &amp; estimate</h3>
+              <h3>Walkthrough &amp; Estimate</h3>
               <p>
-                A look in person, measurements taken on site, and a straight
-                number — no inflated middle-man markup.
+                Within the scope of work, measurements are taken on site and
+                given a straight number.
               </p>
             </li>
             <li>
               <span class="step-num">03</span>
-              <h3>Work gets done</h3>
+              <h3>Final Reveal</h3>
               <p>
                 On the schedule we agreed on, cleaned up after, no surprise line
                 items at the end.
@@ -374,7 +381,7 @@
       <section class="gallery" id="gallery">
         <div class="container">
           <p class="section-eyebrow">Job Site Photos</p>
-          <h2 class="section-title">Recent work</h2>
+          <h2 class="section-title">Recent Work</h2>
           <p class="section-lede">
             A sample of finished jobs. Replace these placeholders with real
             photos — see the README for exactly how — or follow along for new
@@ -648,10 +655,7 @@
               whoever shows up with the tools is whoever signs off when it's
               done.
             </p>
-            <p>
-              Service Area: This area is for general construction and
-              maintenance work in the local community.
-            </p>
+            <p>Service Area: Bensalem, PA or surrounding areas</p>
           </div>
           <div class="about-card">
             <span class="card-label">JOB TICKET</span>
@@ -661,7 +665,7 @@
                 <dd>One — Platov</dd>
               </div>
               <div>
-                <dt>Service area</dt>
+                <dt>Service Area</dt>
                 <dd>
                   Painting, Drywall, Flooring, Decks, Tile, Renovations, Home
                   Maintenance, Lock Installations, and much more.
@@ -733,14 +737,8 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <a href="#top" class="wordmark small">Platov<span>Generalcon</span></a>
-        <nav class="footer-nav">
-          <a href="#services">Services</a>
-          <a href="#gallery">Job Photos</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </nav>
         <a
-          href="https://www.instagram.com/platovgeneralcon"
+          href="https://www.instagram.com/platov_generalcon"
           target="_blank"
           rel="noopener"
           class="footer-instagram"
