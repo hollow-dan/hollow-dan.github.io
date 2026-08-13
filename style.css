@@ -51,6 +51,7 @@ h1,h2,h3
   line-height: 1.2;
   margin: 0;
   letter-spacing: 0.2px;
+  opacity: 0.95;
 }
 
 p{ margin: 0 0 1em; }
@@ -58,8 +59,8 @@ p:last-child{ margin-bottom: 0; }
 
 .container{
   max-width: var(--container);
-  margin: 1 auto;
-  padding: 0 24px;
+  margin: 0 auto;
+  padding: 5px 1px;
 }
 
 :focus-visible{
@@ -146,8 +147,12 @@ p:last-child{ margin-bottom: 0; }
   border-bottom: 1px solid var(--line);
 }
 .header-inner{
-  display:flex; align-items:center; justify-content:space-between;
-  padding-top: 16px; padding-bottom: 16px;
+  display:flex; 
+  align-items:center;
+  justify-content:space-between;
+  flex-wrap: nowrap;
+  row-gap: 10px;
+  container-type: inline-size;
 }
 .wordmark{
   font-family: var(--font-display);
@@ -163,7 +168,7 @@ p:last-child{ margin-bottom: 0; }
 .wordmark.small{ font-size: 19px; }
 
 .main-nav{
-  display:flex; align-items:center; gap: 28px;
+  display:flex; align-items:center; gap: clamp(14px, 2.4vw, 28px);
   font-size: 14.5px; font-weight: 600;
 }
 .main-nav a{ position:relative; }
@@ -203,8 +208,26 @@ p:last-child{ margin-bottom: 0; }
   background: var(--ink);
   color: var(--paper);
   position: relative;
+  z-index: 0;
   overflow: hidden;
 }
+
+.hvac-stock{
+  position: absolute;
+  top: 1; right: 0; bottom: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: -1;
+  object-fit: cover;
+  object-position: right;
+  opacity: 0.2;
+}
+.hero-overlay{
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+
 .hero-inner{
   padding-top: 96px;
   padding-bottom: 64px;
@@ -330,7 +353,7 @@ p:last-child{ margin-bottom: 0; }
 /* ===========================================================
    GALLERY
    =========================================================== */
-.gallery{ padding: 88px 0; }
+.gallery{ padding: 20px 0; }
 
 .tile-grid{
   display:grid;
@@ -393,13 +416,10 @@ a.tile{ cursor: pointer; }
   color: var(--chalk-blue);
   margin-bottom: 4px;
 }
-
-.gallery-cta{ margin-top: 44px; text-align:center; }
-
 /* ===========================================================
    ABOUT
    =========================================================== */
-.about{ padding: 88px 0; }
+.about{ padding: 20px 0; }
 .about-inner{
   display:grid;
   grid-template-columns: 1.3fr 1fr;
@@ -437,10 +457,10 @@ a.tile{ cursor: pointer; }
 .contact{
   background: var(--ink);
   color: var(--paper);
-  padding: 96px 0;
+  padding: 30px 0;
   text-align:center;
 }
-.contact-inner{ max-width: 620px; }
+.contact-inner{ max-width: 620px; position:relative; margin:0 auto; }
 .contact .section-eyebrow{ justify-content:center; }
 .contact-sub{
   color: var(--paper-soft);
@@ -460,16 +480,16 @@ a.tile{ cursor: pointer; }
 .site-footer{
   background: var(--paper);
   border-top: 1px solid var(--line);
-  padding: 32px 0 18px;
+  padding: 2px 0 2px;
 }
 .footer-inner{
   display:flex; align-items:center; justify-content:space-between;
-  flex-wrap:wrap; gap: 18px;
-  padding-bottom: 18px;
+  flex-wrap:wrap;
+  padding-bottom: 2px;
 }
 .footer-nav{ display:flex; gap: 22px; font-size: 14px; font-weight: 600; }
 .footer-instagram{
-  width: 38px; height: 38px;
+  width: 50px; height: 50px;
   display:flex; align-items:center; justify-content:center;
   border: 1.5px solid var(--ink); border-radius: 50%;
   transition: background-color 0.15s ease, color 0.15s ease;
@@ -480,6 +500,8 @@ a.tile{ cursor: pointer; }
   font-size: 12.5px;
   color: var(--ink-soft);
   font-family: var(--font-mono);
+  padding-top: 20px;
+  padding-bottom: 8px;
 }
 
 /* ===========================================================
@@ -492,7 +514,7 @@ a.tile{ cursor: pointer; }
   .about-inner{ grid-template-columns: 1fr; gap: 40px; }
 }
 
-@media (max-width: 720px){
+@container (max-width: 720px){
   .main-nav{
     position:fixed; inset: 0 0 auto 0; top: 65px;
     background: var(--drywall);
@@ -507,7 +529,9 @@ a.tile{ cursor: pointer; }
   .main-nav a{ width:100%; padding: 14px 0; border-bottom: 1px solid var(--line); }
   .nav-instagram{ margin-top: 10px; justify-content:center; }
   .nav-toggle{ display:flex; }
+}
 
+@media (max-width: 720px){
   .ticket-grid{ grid-template-columns: 1fr; }
   .tile-grid{ grid-template-columns: 1fr; }
 }

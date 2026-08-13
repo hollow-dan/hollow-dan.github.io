@@ -31,8 +31,8 @@
 
         <nav class="main-nav" id="main-nav">
           <a href="#services">Services</a>
-          <a href="#gallery">Job Photos</a>
           <a href="#how">How It Works</a>
+          <a href="#gallery">Job Photos</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
           <!-- TODO: replace with your real Instagram handle/URL -->
@@ -80,6 +80,13 @@
     <main id="main">
       <!-- ============ HERO ============ -->
       <section class="hero">
+        <img
+          src="images\hvac-stock.jpg"
+          alt="Two Workers on the job"
+          class="hvac-stock"
+          aria-hidden="true"
+        />
+        <div class="hero-overlay" aria-hidden="true"></div>
         <div class="container hero-inner">
           <p class="eyebrow">Based out of Bensalem & Trevose</p>
           <h1 class="hero-title">
@@ -99,12 +106,6 @@
               class="btn btn-ghost"
               >Message on Instagram</a
             >
-            <img
-              src="images/main-house.jpg"
-              alt=""
-              class="hero-illustration"
-              aria-hidden="true"
-            />
           </div>
         </div>
 
@@ -383,10 +384,7 @@
           <p class="section-eyebrow">Job Site Photos</p>
           <h2 class="section-title">Recent Work</h2>
           <p class="section-lede">
-            A sample of finished jobs. Replace these placeholders with real
-            photos — see the README for exactly how — or follow along for new
-            work as it's posted.
-          </p>
+            A sample of recent jobs, from start to finish. For more, check out the Instagram page.
 
           <div class="tile-grid">
             <!-- PHOTO TILE — replace the background-image url() below with your own image path -->
@@ -629,16 +627,6 @@
               </figcaption>
             </figure>
           </div>
-
-          <div class="gallery-cta">
-            <a
-              href="https://www.instagram.com/platov_generalcon"
-              target="_blank"
-              rel="noopener"
-              class="btn btn-primary"
-              >More work on Instagram</a
-            >
-          </div>
         </div>
       </section>
 
@@ -693,27 +681,12 @@
             Send the details on Instagram — what the job is, where it is, and a
             photo or two if you have them. Estimates are free.
           </p>
-          <a
-            href="https://www.instagram.com/platov_generalcon"
-            target="_blank"
-            rel="noopener"
-            class="btn btn-primary btn-large"
-          >
             <p class="contact-alt">
               Or call/text <a href="tel:+14452629388">(445) 262-9388</a> / email
               <a href="mailto:platov.generalcon@gmail.com"
                 >platov.generalcon@gmail.com</a
               >
             </p>
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
               <rect x="2" y="2" width="20" height="20" rx="5" />
               <circle cx="12" cy="12" r="4.2" />
               <circle
@@ -723,13 +696,8 @@
                 fill="currentColor"
                 stroke="none"
               />
-            </svg>
-            Message @platovgeneralcon
           </a>
-          <!--
-          TODO: To add a phone number or email, copy this block under the Instagram link:
-          <p class="contact-alt">Or call/text <a href="tel:+1XXXXXXXXXX">(XXX) XXX-XXXX</a> / email <a href="mailto:you@example.com">you@example.com</a></p>
-        --></div>
+        </div>
       </section>
     </main>
 
@@ -737,6 +705,10 @@
     <footer class="site-footer">
       <div class="container footer-inner">
         <a href="#top" class="wordmark small">Platov<span>Generalcon</span></a>
+              <p class="footer-fine">
+        &copy; <span id="year"></span> Platov Generalcon. All work shown is
+        original to this business.
+      </p>
         <a
           href="https://www.instagram.com/platov_generalcon"
           target="_blank"
@@ -765,10 +737,6 @@
           </svg>
         </a>
       </div>
-      <p class="footer-fine">
-        &copy; <span id="year"></span> Platov Generalcon. All work shown is
-        original to this business.
-      </p>
     </footer>
 
     <script src="main.js"></script>
