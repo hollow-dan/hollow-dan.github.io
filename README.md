@@ -1,5 +1,7 @@
 # Platov Generalcon — Website
 
+Quick Link -> https://hollow-dan.github.io/
+
 A single-page site for Platov Generalcon (painting, drywall, flooring, decks, tile, renovations, home maintenance, and lock installation), built in plain HTML/CSS/JS so it can be hosted for free on GitHub Pages.
 
 ```
