@@ -12,6 +12,7 @@
   --line:       #CFC8BA;   /* hairline borders / dividers */
   --ink-soft:   #50565F;   /* secondary text on light bg */
   --paper-soft: #D9D2C3;   /* secondary text on dark bg */
+  --yellow:     #FFB901;   /* small accent — for ruler */
 
   --font-display: "Big Shoulders Display", sans-serif;
   --font-body:    "Inter",                 sans-serif;
@@ -249,7 +250,7 @@ p:last-child{ margin-bottom: 0; }
 .hero-sub{
   font-size: 18px;
   color: var(--paper-soft);
-  max-width: 54ch;
+  max-width: 56ch;
   margin-bottom: 36px;
 }
 .hero-actions{ display:flex; flex-wrap:wrap; gap: 16px; }
@@ -277,7 +278,11 @@ p:last-child{ margin-bottom: 0; }
   .ticker-track{ animation: none; overflow-x: auto; }
 }
 
-.ruler{ display:block; width: 100%; height: 44px; }
+.ruler{ 
+  display:block; 
+  width: 100%; 
+  height: 44px;
+}
 
 /* ===========================================================
    SERVICES — "ticket" cards
