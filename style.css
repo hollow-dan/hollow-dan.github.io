@@ -284,6 +284,12 @@ p:last-child{ margin-bottom: 0; }
   height: 44px;
 }
 
+.ruler-numbers text{
+  font-family: var(--font-mono);
+  font-size: 12px;
+  fill: var(--ink);
+}
+
 /* ===========================================================
    SERVICES — "ticket" cards
    =========================================================== */
