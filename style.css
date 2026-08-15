@@ -266,7 +266,7 @@ p:last-child{ margin-bottom: 0; }
   font-family: var(--font-mono);
   font-size: 13px; letter-spacing: 0.08em;
   color: var(--paper-soft);
-  animation: ticker 38s linear infinite;
+  animation: ticker 45s linear infinite;
   width: max-content;
 }
 .ticker-track span:nth-child(odd){ color: var(--cedar); }
