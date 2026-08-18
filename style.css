@@ -427,6 +427,7 @@ a.tile{ cursor: pointer; }
   color: var(--chalk-blue);
   margin-bottom: 4px;
 }
+
 /* ===========================================================
    ABOUT
    =========================================================== */
@@ -545,4 +546,46 @@ a.tile{ cursor: pointer; }
 @media (max-width: 720px){
   .ticket-grid{ grid-template-columns: 1fr; }
   .tile-grid{ grid-template-columns: 1fr; }
+}
+
+/* ===========================================================
+   CLIP MODAL — inline Instagram player
+   =========================================================== */
+.clip-modal{
+  position: fixed; inset: 0; z-index: 300;
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+.clip-modal[hidden]{ display: none; }
+.clip-modal-backdrop{
+  position: absolute; inset: 0;
+  background: rgba(31,36,43,0.86);
+}
+.clip-modal-dialog{
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  background: var(--paper);
+  border-radius: var(--radius);
+  padding: 44px 8px 8px;
+}
+.clip-modal-close{
+  position: absolute; top: 8px; right: 8px;
+  width: 34px; height: 34px;
+  border: none; border-radius: 50%;
+  background: var(--ink); color: var(--paper);
+  font-size: 20px; line-height: 1;
+  cursor: pointer;
+}
+.clip-modal-close:hover{ background: var(--chalk-blue); }
+.clip-modal-body{ min-height: 200px; }
+.clip-modal-loading{
+  display:flex; align-items:center; justify-content:center;
+  min-height: 200px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--ink-soft);
 }

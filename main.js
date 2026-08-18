@@ -62,6 +62,67 @@ document.addEventListener('DOMContentLoaded', function ()
     rulerSvg.appendChild(numbersGroup);
     }
 
+    // Instagram clip modal — plays Reels inline instead of leaving the site
+  var clipTriggers      = document.querySelectorAll('[data-clip-trigger]');
+  var clipModal          = document.getElementById('clip-modal');
+  var clipModalBody      = document.getElementById('clip-modal-body');
+  var embedScriptLoaded  = false;
+
+  function loadInstagramEmbedScript(callback)
+    {
+    if (embedScriptLoaded) { callback(); return; }
+    var script  = document.createElement('script');
+    script.src   = 'https://www.instagram.com/embed.js';
+    script.async = true;
+    script.onload = function () { embedScriptLoaded = true; callback(); };
+    document.body.appendChild(script);
+    }
+
+  function openClipModal(reelUrl)
+    {
+    if (!clipModal || !clipModalBody) return;
+
+    clipModalBody.innerHTML =
+      '<div class="clip-modal-loading">Loading clip…</div>' +
+      '<blockquote class="instagram-media" data-instgrm-permalink="' + reelUrl + '" data-instgrm-version="14">' +
+      '<a href="' + reelUrl + '" target="_blank" rel="noopener">View this clip on Instagram</a>' +
+      '</blockquote>';
+
+    clipModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+
+    loadInstagramEmbedScript(function () { if (window.instgrm) window.instgrm.Embeds.process(); });
+    }
+
+  function closeClipModal()
+    {
+    if (!clipModal) return;
+    clipModal.hidden = true;
+    clipModalBody.innerHTML = ''; // stops playback, resets for the next open
+    document.body.style.overflow = '';
+    }
+
+  clipTriggers.forEach(function (trigger)
+    {
+    trigger.addEventListener('click', function (e)
+      {
+      var reelUrl = trigger.getAttribute('data-reel-url');
+      if (!reelUrl || reelUrl.indexOf('REPLACE') !== -1) return; // not set yet — fall back to the normal link
+      e.preventDefault();
+      openClipModal(reelUrl);
+      });
+    });
+
+  document.querySelectorAll('[data-clip-close]').forEach(function (el)
+    {
+    el.addEventListener('click', closeClipModal);
+    });
+
+  document.addEventListener('keydown', function (e)
+    {
+    if (e.key === 'Escape' && clipModal && !clipModal.hidden) closeClipModal();
+    });
+
   // Footer year, kept up to date automatically
   var yearEl = document.getElementById('year');
   if (yearEl) 
@@ -70,3 +131,5 @@ document.addEventListener('DOMContentLoaded', function ()
     }
 
 });
+
+

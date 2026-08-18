@@ -482,9 +482,11 @@
             <!-- CLIP TILE — points out to a specific Instagram post/reel. Swap the href for the real post URL. -->
             <a
               class="tile tile-clip"
-              href="https://www.instagram.com/platov_generalcon"
+              href="https://www.instagram.com/p/DTwpv6kDGp_/"
               target="_blank"
               rel="noopener"
+              data-clip-trigger
+              data-clip-url="https://www.instagram.com/p/DTwpv6kDGp_/"
             >
               <div class="tile-media tile-media-dark">
                 <div class="tile-placeholder">
@@ -502,7 +504,7 @@
                       stroke="none"
                     />
                   </svg>
-                  <span>Watch on Instagram</span>
+                  <span>Play Clip</span>
                 </div>
               </div>
               <span class="tile-stamp">CLIP</span>
@@ -543,9 +545,11 @@
 
             <a
               class="tile tile-clip"
-              href="https://www.instagram.com/platov_generalcon"
+              href="https://www.instagram.com/p/DWMmCZXR-_w/"
               target="_blank"
               rel="noopener"
+              data-clip-trigger
+              data-reel-url="https://www.instagram.com/p/DWMmCZXR-_w/"
             >
               <div class="tile-media tile-media-dark">
                 <div class="tile-placeholder">
@@ -563,7 +567,7 @@
                       stroke="none"
                     />
                   </svg>
-                  <span>Watch on Instagram</span>
+                  <span>Play Clip</span>
                 </div>
               </div>
               <span class="tile-stamp">CLIP</span>
@@ -742,6 +746,15 @@
         </a>
       </div>
     </footer>
+
+    <!-- ============ CLIP MODAL (inline Instagram player) ============ -->
+<div class="clip-modal" id="clip-modal" hidden>
+  <div class="clip-modal-backdrop" data-clip-close></div>
+  <div class="clip-modal-dialog" role="dialog" aria-modal="true" aria-label="Instagram clip">
+    <button type="button" class="clip-modal-close" data-clip-close aria-label="Close">&times;</button>
+    <div class="clip-modal-body" id="clip-modal-body"></div>
+  </div>
+</div>
 
     <script src="main.js"></script>
   </body>
